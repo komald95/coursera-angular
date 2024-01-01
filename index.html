@@ -1,14 +1,21 @@
-<html>
-    <head>       
-        <script src="app.js"></script>        
+<html ng-app="myFirstApp">
+    <head> 
+        <title>My First Angular App</title>      
+        <script src="angular.min.js"></script>
+        <script src="app1.js"></script>        
     </head>
 <body>
-    <h2>Low Cohesion and Tight Coupling</h2>
+   <!-- <h2>Low Cohesion and Tight Coupling</h2>
     <div id="nameCalculator">
       <div>
         Your name: <input type="text" id="name">
       </div>
       <div id="output"></div>
+    </div> -->
+    <h1>My first Angular Application</h1>
+    <div ng-controller="MyFirstController">
+       <input type="text" ng-model="name">
+       Inside input text = {{name}}
     </div>
   </body>
 </html>
