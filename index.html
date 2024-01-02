@@ -1,6 +1,6 @@
-<html ng-app="myFirstApp">
+<html ng-app="NameCalculator">
     <head> 
-        <title>My First Angular App</title>      
+        <title>Name Calculator</title>      
         <script src="angular.min.js"></script>
         <script src="app1.js"></script>        
     </head>
@@ -12,10 +12,15 @@
       </div>
       <div id="output"></div>
     </div> -->
-    <h1>My first Angular Application</h1>
-    <div ng-controller="MyFirstController">
-       <input type="text" ng-model="name">
-       Inside input text = {{name}}
+    <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculatorController">
+      Your Name : 
+      <input type="text"
+      ng-model="name"
+      ng-keyup="displayNumeric();">
+    </div>
+    <div>
+      Total Numeric value of person's name is: {{name}}
     </div>
   </body>
 </html>
