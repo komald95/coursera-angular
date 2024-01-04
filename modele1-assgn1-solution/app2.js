@@ -13,10 +13,9 @@
     $scope.msg ="";
 
     $scope.checkonClick = function(){
-        var countItems = $scope.lunchItems.split(",").length;
-        if (countItems < 2 ) {
+        if ($scope.lunchItems.length == 0) {
             $scope.msg = "Please enter data first";
-          }else if (countItems < 4 ) {
+          }else if ($scope.lunchItems.split(",").length < 4 ) {
             $scope.msg = "Enjoy!";
           }else {
             $scope.msg = "Too much!";
